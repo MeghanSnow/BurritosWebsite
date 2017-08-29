@@ -1,4 +1,4 @@
-
+/*
 window.onscroll = function() {
     var el = document.getElementsByTagName('header')[0];
     var className = 'small';
@@ -8,4 +8,30 @@ window.onscroll = function() {
         else
             el.classList.remove(className);
     }
-};
+};*/
+$(document).ready(function(){
+
+    $(function(){
+        $(window).scroll(function(){
+            var el = document.getElementsByTagName('header')[0];
+            var className = 'small';
+            if (el.classList) {
+                if (window.scrollY > 10)
+                    el.classList.add(className);
+                else
+                    el.classList.remove(className);
+            }
+        });
+    });
+
+
+
+
+
+})
+
+
+
+
+
+
