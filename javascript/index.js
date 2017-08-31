@@ -9,11 +9,11 @@ window.onscroll = function() {
             el.classList.remove(className);
     }
 };*/
-$(document).ready(function(){
+
 
 //fix this shit code
 
-    var slideCount = $('#slider ul li').length;
+    /*var slideCount = $('#slider ul li').length;
     var slideWidth = $('#slider ul li').width();
     var slideHeight = $('#slider ul li').height();
     var sliderUlWidth = slideCount * slideWidth;
@@ -54,6 +54,22 @@ $(document).ready(function(){
         moveRight();
     });
 
+*/
+
+
+
+$(document).ready(function(){
+
+    $('.imageList').slick({
+            dots: true,
+            arrows: false,
+            accessibility: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            fade: true,
+            cssEase: 'linear',
+            centerMode: true
+    });
 
     $(function(){
         $(window).scroll(function(){
@@ -67,9 +83,6 @@ $(document).ready(function(){
             }
         });
     });
-
-
-
     $(document).on('click', 'a', function(event){
         event.preventDefault();
         $('html, body').animate({
